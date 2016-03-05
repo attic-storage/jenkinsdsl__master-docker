@@ -3,4 +3,4 @@ start:
 		-v $(shell pwd)/.config:/var/jenkins_home --rm jenkinsdsl/master-docker
 
 build:
-	docker build -t jenkinsdsl/master-docker master-docker
+	docker build -t jenkinsdsl/master-docker .
