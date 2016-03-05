@@ -1,13 +1,15 @@
 // See https://github.com/batmat/jez/tree/master/jenkins-master/init_scripts
 // Inspired by https://wiki.jenkins-ci.org/display/JENKINS/Add+a+Maven+Installation%2C+Tool+Installation%2C+Modify+System+Config
 import jenkins.model.*
+import hudson.tools.*
+import static hudson.tasks.Maven.*
 
 println "Adding an auto installer for Maven 3.3.9"
 
-def mavenPluginExtension = Jenkins.instance.getExtensionList(hudson.tasks.Maven.DescriptorImpl.class)[0]
+def mavenPluginExtension = Jenkins.instance.getExtensionList(DescriptorImpl.class)[0]
 
 def asList = (mavenPluginExtension.installations as List)
-asList.add(new hudson.tasks.Maven.MavenInstallation('Maven 3.x', null, [new hudson.tools.InstallSourceProperty([new hudson.tasks.Maven.MavenInstaller("3.3.9")])]))
+asList.add(new MavenInstallation('Maven 3.x', null, [new InstallSourceProperty([new MavenInstaller("3.3.9")])]))
 
 mavenPluginExtension.installations = asList
 
