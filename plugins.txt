@@ -33,4 +33,4 @@ momentjs
 handlebars
 pipeline-rest-api
 branch-api
-
+envinject
