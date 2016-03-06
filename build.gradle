@@ -17,6 +17,7 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy:2.4.6'
     compile 'org.jenkins-ci.main:jenkins-core:1.651'
+    compile 'org.jenkins-ci.modules:sshd:1.6'
     compile 'org.jenkins-ci.plugins:matrix-auth:1.3.2@jar'
 }
 

@@ -9,3 +9,5 @@ ENV DEFAULT_ADMIN_PASSWORD adminjenkins
 ENV ADMIN_PASSWORD $DEFAULT_ADMIN_PASSWORD
 
 COPY init_scripts/*.groovy /usr/share/jenkins/ref/init.groovy.d/
+
+EXPOSE 16042
